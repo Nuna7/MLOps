@@ -6,10 +6,12 @@ WORKDIR /app
 
 # Copy your Python script and any necessary files
 COPY train_model.py /app/
-COPY dataset.csv /app/
+COPY train.csv /app/
+COPY test.csv /app/
 
 # Install any required Python packages
 RUN pip install scikit-learn
+RUN pip install matplotlib
 
 # Define the command to run your script
 CMD ["python", "train_model.py"]
