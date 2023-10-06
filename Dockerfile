@@ -11,4 +11,4 @@ COPY model.pkl /app/
 RUN pip install scikit-learn
 
 # Define the command to run your script
-CMD ["python", "model.pkl"]
+CMD ["python", "train_model.py"]
